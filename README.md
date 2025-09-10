@@ -27,16 +27,14 @@ This project applies transfer learning using DenseNet121 to build a binary class
 4. Visualization of model interpretability using Grad-CAM heatmaps.
 
 
-**Key Technologies Used:**
+## Key Technologies Used:
 
 - Python
 - TensorFlow / Keras
 - DenseNet121 (Transfer Learning)
 - scikit-learn
 - Matplotlib & Seaborn
-- PyCharm (for implementation)
 - Grad-CAM (for explainability)
-
 
 - **Frameworks**: TensorFlow / Keras
 - **Dataset**: [Kermany’s Chest X-Ray Pneumonia dataset (Kaggle)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
