@@ -35,6 +35,8 @@ This project applies transfer learning using DenseNet121 to build a binary class
 - scikit-learn
 - Matplotlib & Seaborn
 - Grad-CAM (for explainability)
+  
+---
 
 - **Frameworks**: TensorFlow / Keras
 - **Dataset**: [Kermany’s Chest X-Ray Pneumonia dataset (Kaggle)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
