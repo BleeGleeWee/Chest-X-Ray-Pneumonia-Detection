@@ -1,0 +1,5 @@
+tensorflow>=2.8.0
+scikit-learn
+matplotlib
+pandas
+numpy
