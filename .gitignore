@@ -1,41 +1,41 @@
-# Prerequisites
-*.d
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+*.egg-info/
+.eggs/
+*.egg
 
-# Linker files
-*.ilk
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
 
-# Debugger Files
-*.pdb
+# Data files (large raw data should not be versioned)
+data/
+results/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Logs
+*.log
 
-# Fortran module files
-*.mod
-*.smod
+# Saved models
+*.h5
+*.pkl
+*.joblib
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+# IDE / Editor specific
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
