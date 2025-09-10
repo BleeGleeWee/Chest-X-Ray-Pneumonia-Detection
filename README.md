@@ -7,7 +7,7 @@ This project implements a **binary classification model** for pneumonia detectio
 
 Pneumonia is an inflammatory condition primarily affecting the lungs, characterized by symptoms such as cough, chest pain, fever, and difficulty breathing. The goal of this project is to develop an automated system for detecting and classifying pneumonia in chest X-ray images.
 
-<img width="485" height="480" alt="215302250-841fde71-e182-4ffd-8036-625a3a717de7" src="https://github.com/user-attachments/assets/646fa855-3ca4-4dd8-948a-9849067e0bdf" />
+< img align= "center" width="485" height="480" alt="215302250-841fde71-e182-4ffd-8036-625a3a717de7" src="https://github.com/user-attachments/assets/646fa855-3ca4-4dd8-948a-9849067e0bdf" />
 
 
 ## Motivation
