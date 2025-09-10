@@ -51,7 +51,7 @@ Test: ~624 images
 ## 📂 Repository Structure
 ```
 
-ChestXray-Pneumonia-DenseNet/
+Chest-X-Ray-Pneumonia-Detection/
 │── data/                  # dataset (train/val/test)
 │── notebooks/             # Jupyter notebooks
 │── src/                   # source code
@@ -69,8 +69,8 @@ ChestXray-Pneumonia-DenseNet/
 
 ```bash
 # Clone repo
- git clone https://github.com/<your-username>/ChestXray-Pneumonia-DenseNet.git
- cd ChestXray-Pneumonia-DenseNet
+ git clone https://github.com/BleeGleeWee/Chest-X-Ray-Pneumonia-Detection.git
+ cd Chest-X-Ray-Pneumonia-Detection
 
 # Install requirements
  pip install -r requirements.txt
