@@ -95,7 +95,24 @@ The repo includes **Grad-CAM visualizations** to highlight pneumonia-infected re
 ## ⚠️ Note
 
 While the training accuracy reached \~95%, **generalization on test data was lower** (\~50% F1). This highlights the **importance of robust validation, cross-validation, and dataset balancing** in medical ML.
-
 ---
+
+## 🤝 Contributing
+
+This project is open for contributions! If you have ideas to improve the model, add visualizations, or enhance the code, feel free to submit a **pull request** or open an **issue**.  
+
+Please keep in mind:  
+- This repository is intended for **educational and research purposes only**.  
+- Any contributions should maintain the professional and ethical standards of AI in healthcare.  
+- Ensure that new code is properly documented and reproducible.  
+
+Welcoming improvements such as:  
+- Better data preprocessing or augmentation techniques  
+- New architectures or model enhancements  
+- Additional visualizations (training curves, Grad-CAMs, confusion matrices)  
+- Improved notebook explanations or tutorials  
+
+Thank you for helping make this project better! 🌟
+
 
 
