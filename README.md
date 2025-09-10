@@ -95,6 +95,7 @@ The repo includes **Grad-CAM visualizations** to highlight pneumonia-infected re
 ## ⚠️ Note
 
 While the training accuracy reached \~95%, **generalization on test data was lower** (\~50% F1). This highlights the **importance of robust validation, cross-validation, and dataset balancing** in medical ML.
+
 ---
 
 ## 🤝 Contributing
