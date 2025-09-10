@@ -29,13 +29,13 @@ This project applies transfer learning using DenseNet121 to build a binary class
 
 **Key Technologies Used:**
 
-Python
-TensorFlow / Keras
-DenseNet121 (Transfer Learning)
-scikit-learn
-Matplotlib & Seaborn
-PyCharm (for implementation)
-Grad-CAM (for explainability)
+- Python
+- TensorFlow / Keras
+- DenseNet121 (Transfer Learning)
+- scikit-learn
+- Matplotlib & Seaborn
+- PyCharm (for implementation)
+- Grad-CAM (for explainability)
 
 
 - **Frameworks**: TensorFlow / Keras
