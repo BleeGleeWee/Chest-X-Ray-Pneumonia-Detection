@@ -114,16 +114,17 @@ To start the model training process, run:
 python train.py
 ```
 
+---
 
-
-##📈 Final performance & Results:
+## 📈 Final performance & Results:
 
 * **Training Accuracy:** 95.76%
 * **Training Loss:** 0.1237
 * **Validation Accuracy (Log):** 81.25%
 * **Validation Loss:** 0.2429
 
-##Detailed Evaluation Report*Note: The detailed metrics below reflect a specific validation batch evaluation.*
+## Detailed Evaluation Report
+*Note: The detailed metrics below reflect a specific validation batch evaluation.*
 
 ```text
               precision    recall  f1-score   support
@@ -138,7 +139,7 @@ weighted avg       0.43      0.44      0.42        16
 ```
 
 
-##🔍 Model Interpretability (Grad-CAM)We use Gradient-weighted Class Activation Mapping (Grad-CAM) to make the "black box" model transparent. The images below show the original X-ray alongside the heatmaps indicating areas indicative of Pneumonia.
+## 🔍 Model Interpretability (Grad-CAM)We use Gradient-weighted Class Activation Mapping (Grad-CAM) to make the "black box" model transparent. The images below show the original X-ray alongside the heatmaps indicating areas indicative of Pneumonia.
 
 ---
 
