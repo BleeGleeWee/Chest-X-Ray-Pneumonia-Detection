@@ -1,4 +1,19 @@
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+
 # Chest X-Ray Pneumonia Detection using DenseNet121
+
+## 🚀 Live Demo
+Try out the model yourself in the live web application:
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chest-x-ray-pneumonia-detection-ml.streamlit.app/)
+
+*Click the button above to upload an X-ray image and test the classification model.*
+
+---
 
 This project implements a **binary classification model** for pneumonia detection from chest X-rays using **transfer learning with DenseNet121**.
 
@@ -38,8 +53,23 @@ This project applies transfer learning using DenseNet121 to build a binary class
 - scikit-learn
 - Matplotlib & Seaborn
 - Grad-CAM (for explainability)
-  
----
+
+
+## 📂 Repository Structure
+```
+
+Chest-X-Ray-Pneumonia-Detection/
+│── data/                  # dataset (train/val/test)
+│── notebooks/             # Jupyter notebooks
+│── densenet_model.py     # DenseNet121 model builder
+│── train.py               # training & evaluation script
+│── gradcam.py             # Grad-CAM visualization
+│── README.md              # project documentation
+│── requirements.txt       # dependencies
+│── .gitignore             # ignored files
+
+````
+
 
 - **Frameworks**: TensorFlow / Keras
 - **Dataset**: [Kermany’s Chest X-Ray Pneumonia dataset (Kaggle)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
@@ -49,48 +79,79 @@ Train: ~5,216 images
 Validation: ~16 images
 Test: ~624 images
 - **Key Techniques**: Transfer Learning, Data Augmentation, Grad-CAM visualization
-- **Performance**: Achieved ~95% training accuracy, ~87.5% validation accuracy.
+- **Architecture:** DenseNet121 (Pre-trained on ImageNet).
+- **Explainability:** Integrated **Grad-CAM** heatmaps to visualize the regions of the lung the model focuses on for prediction.
+- **Performance:** High training accuracy (~95%) with real-time inference capabilities.
 
-## 📂 Repository Structure
-```
+---
 
-Chest-X-Ray-Pneumonia-Detection/
-│── data/                  # dataset (train/val/test)
-│── notebooks/             # Jupyter notebooks
-│── src/                   # source code
-│   ├── densenet\_model.py # DenseNet121 model builder
-│   ├── train.py           # training & evaluation script
-│   └── gradcam.py         # Grad-CAM visualization
-│── results/               # trained models, plots
-│── README.md              # project documentation
-│── requirements.txt       # dependencies
-│── .gitignore             # ignored files
+## 📊 Dataset
+The project uses the **Kermany’s Chest X-Ray Pneumonia dataset** sourced from Kaggle.
+* **Total Images:** 5,863
+* **Categories:** Normal vs. Pneumonia
+* **Class Balance:** The dataset is imbalanced, with significantly more Pneumonia cases.
 
-````
 
-## 🚀 Quickstart
+<img width="855" height="372" alt="a9ac47b9-fde0-4e25-9fa9-eafd2a6e1512" src="https://github.com/user-attachments/assets/9fab80f1-b0ab-4105-a080-8f18c43d3f31" />
+<img width="855" height="372" alt="a9ac47b9-fde0-4e25-9fa9-eafd2a6e1512" src="https://github.com/user-attachments/assets/9fab80f1-b0ab-4105-a080-8f18c43d3f31" />
+*(Image: Distribution of classes in the training set)*
+
+---
+
+## 🚀 Installation & Usage
+
+### 1. Clone the Repository
+To view or run this project on your local machine, clone the repository using the command below:
 
 ```bash
-# Clone repo
- git clone https://github.com/BleeGleeWee/Chest-X-Ray-Pneumonia-Detection.git
- cd Chest-X-Ray-Pneumonia-Detection
+git clone [https://github.com/BleeGleeWee/Chest-X-Ray-Pneumonia-Detection.git](https://github.com/BleeGleeWee/Chest-X-Ray-Pneumonia-Detection.git)
+cd Chest-X-Ray-Pneumonia-Detection
 
-# Install requirements
- pip install -r requirements.txt
+```
 
-# Run training
- python src/train.py
-````
+###2. Install DependenciesEnsure you have Python installed, then install the required packages:
 
-## 📊 Results
+```bash
+pip install -r requirements.txt
 
-* **Validation Accuracy**: \~87.5%
-* **F1-Score (Test)**: \~0.50 (imbalanced dataset — further tuning needed)
-* **Observation**: Model performs well but struggles with **small test set & noise in X-rays**.
+```
 
-## 🔍 Interpretability (Grad-CAM)
+###3. Train the ModelTo start the training process:
 
-The repo includes **Grad-CAM visualizations** to highlight pneumonia-infected regions in X-rays.
+```bash
+python train.py
+
+```
+
+---
+
+##📈 Final performance & Results:
+
+* **Training Accuracy:** 95.76%
+* **Training Loss:** 0.1237
+* **Validation Accuracy (Log):** 81.25%
+* **Validation Loss:** 0.2429
+
+###Detailed Evaluation Report*Note: The detailed metrics below reflect a specific validation batch evaluation.*
+
+```text
+              precision    recall  f1-score   support
+
+      Normal       0.40      0.25      0.31         8
+   Pneumonia       0.45      0.62      0.53         8
+
+    accuracy                           0.44        16
+   macro avg       0.43      0.44      0.42        16
+weighted avg       0.43      0.44      0.42        16
+
+```
+
+
+##🔍 Model Interpretability (Grad-CAM)We use Gradient-weighted Class Activation Mapping (Grad-CAM) to make the "black box" model transparent. The images below show the original X-ray alongside the heatmaps indicating areas indicative of Pneumonia.
+
+---
+
+
 
 ## ⚠️ Note
 
@@ -111,9 +172,15 @@ Welcoming improvements such as:
 - Better data preprocessing or augmentation techniques  
 - New architectures or model enhancements  
 - Additional visualizations (training curves, Grad-CAMs, confusion matrices)  
-- Improved notebook explanations or tutorials  
+- Improved notebook explanations or tutorials
+
+OR
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 Thank you for helping make this project better! 🌟
-
-
-
+---
