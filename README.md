@@ -1,23 +1,16 @@
+# Chest X-Ray Pneumonia Detection using DenseNet121
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-
-# Chest X-Ray Pneumonia Detection using DenseNet121
-
 ## 🚀 Live Demo
-Try out the model yourself in the live web application:
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chest-x-ray-pneumonia-detection-ml.streamlit.app/)
-
-*Click the button above to upload an X-ray image and test the classification model.*
-
----
+Deployed link✨ - [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chest-x-ray-pneumonia-detection-ml.streamlit.app/)
 
 This project implements a **binary classification model** for pneumonia detection from chest X-rays using **transfer learning with DenseNet121**.
 
-
+---
 ## Pneumonia Detection using Chest X-ray Images
 
 Pneumonia is an inflammatory condition primarily affecting the lungs, characterized by symptoms such as cough, chest pain, fever, and difficulty breathing. The goal of this project is to develop an automated system for detecting and classifying pneumonia in chest X-ray images.
@@ -25,7 +18,6 @@ Pneumonia is an inflammatory condition primarily affecting the lungs, characteri
 <p align="center">
   <img width="485" height="480" alt="Chest X-ray Example" src="https://github.com/user-attachments/assets/646fa855-3ca4-4dd8-948a-9849067e0bdf" />
 </p>
-
 
 
 ## Motivation
@@ -93,34 +85,34 @@ The project uses the **Kermany’s Chest X-Ray Pneumonia dataset** sourced from 
 
 
 <img width="855" height="372" alt="a9ac47b9-fde0-4e25-9fa9-eafd2a6e1512" src="https://github.com/user-attachments/assets/9fab80f1-b0ab-4105-a080-8f18c43d3f31" />
-<img width="855" height="372" alt="a9ac47b9-fde0-4e25-9fa9-eafd2a6e1512" src="https://github.com/user-attachments/assets/9fab80f1-b0ab-4105-a080-8f18c43d3f31" />
 *(Image: Distribution of classes in the training set)*
 
 ---
 
-## 🚀 Installation & Usage
+## 🚀 How to Clone and Run the Project Locally
 
 ### 1. Clone the Repository
-To view or run this project on your local machine, clone the repository using the command below:
+To view or run this project on your local machine, clone the repository using the following commands:
 
 ```bash
-git clone [https://github.com/BleeGleeWee/Chest-X-Ray-Pneumonia-Detection.git](https://github.com/BleeGleeWee/Chest-X-Ray-Pneumonia-Detection.git)
+git clone https://github.com/BleeGleeWee/Chest-X-Ray-Pneumonia-Detection.git
 cd Chest-X-Ray-Pneumonia-Detection
+````
 
-```
+### 2. Install Dependencies
 
-###2. Install DependenciesEnsure you have Python installed, then install the required packages:
+Ensure you have **Python** installed, then install the required packages:
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
-###3. Train the ModelTo start the training process:
+### 3. Train the Model
+
+To start the model training process, run:
 
 ```bash
 python train.py
-
 ```
 
 ---
