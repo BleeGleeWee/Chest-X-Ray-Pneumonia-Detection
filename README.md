@@ -139,10 +139,10 @@ weighted avg       0.43      0.44      0.42        16
 ```
 
 
-## 🔍 Model Interpretability (Grad-CAM)We use Gradient-weighted Class Activation Mapping (Grad-CAM) to make the "black box" model transparent. The images below show the original X-ray alongside the heatmaps indicating areas indicative of Pneumonia.
+## 🔍 Model Interpretability (Grad-CAM)
+We use Gradient-weighted Class Activation Mapping (Grad-CAM) to make the "black box" model transparent. The images below show the original X-ray alongside the heatmaps indicating areas indicative of Pneumonia.
 
 ---
-
 
 
 ## ⚠️ Note
