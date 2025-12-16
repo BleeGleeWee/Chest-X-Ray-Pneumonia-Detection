@@ -114,9 +114,9 @@ To start the model training process, run:
 python train.py
 ```
 
----
 
-#📈 Final performance & Results:
+
+##📈 Final performance & Results:
 
 * **Training Accuracy:** 95.76%
 * **Training Loss:** 0.1237
