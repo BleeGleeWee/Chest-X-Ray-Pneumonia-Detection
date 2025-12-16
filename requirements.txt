@@ -1,5 +1,7 @@
+streamlit
 tensorflow>=2.8.0
+numpy
+pillow
 scikit-learn
 matplotlib
 pandas
-numpy
