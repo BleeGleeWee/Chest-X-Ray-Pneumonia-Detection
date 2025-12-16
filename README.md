@@ -82,9 +82,8 @@ The project uses the **Kermany’s Chest X-Ray Pneumonia dataset** sourced from 
 * **Total Images:** 5,863
 * **Categories:** Normal vs. Pneumonia
 * **Class Balance:** The dataset is imbalanced, with significantly more Pneumonia cases.
+<img width="560" height="433" alt="866e9dc7-a61b-448b-afe3-8e2aaceefb95" src="https://github.com/user-attachments/assets/c1fc1cb6-1987-4fd8-b7ba-0d26b9e13367" />
 
-
-<img width="855" height="372" alt="a9ac47b9-fde0-4e25-9fa9-eafd2a6e1512" src="https://github.com/user-attachments/assets/9fab80f1-b0ab-4105-a080-8f18c43d3f31" />
 
 ---
 
