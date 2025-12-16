@@ -116,14 +116,14 @@ python train.py
 
 ---
 
-##📈 Final performance & Results:
+#📈 Final performance & Results:
 
 * **Training Accuracy:** 95.76%
 * **Training Loss:** 0.1237
 * **Validation Accuracy (Log):** 81.25%
 * **Validation Loss:** 0.2429
 
-###Detailed Evaluation Report*Note: The detailed metrics below reflect a specific validation batch evaluation.*
+##Detailed Evaluation Report*Note: The detailed metrics below reflect a specific validation batch evaluation.*
 
 ```text
               precision    recall  f1-score   support
