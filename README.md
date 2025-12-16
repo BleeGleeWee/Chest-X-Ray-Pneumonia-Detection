@@ -85,7 +85,6 @@ The project uses the **Kermany’s Chest X-Ray Pneumonia dataset** sourced from 
 
 
 <img width="855" height="372" alt="a9ac47b9-fde0-4e25-9fa9-eafd2a6e1512" src="https://github.com/user-attachments/assets/9fab80f1-b0ab-4105-a080-8f18c43d3f31" />
-*(Image: Distribution of classes in the training set)*
 
 ---
 
