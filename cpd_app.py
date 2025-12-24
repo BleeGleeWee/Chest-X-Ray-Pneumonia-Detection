@@ -5,28 +5,28 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import random
 
-# Handle import error in case gradcam.py is missing locally
+# (man)Handle import error in case gradcam.py is missing locally
 try:
     from gradcam import get_gradcam_heatmap
 except ImportError:
     def get_gradcam_heatmap(model, img_array, layer_name):
         return np.zeros((224, 224))
 
-# ------------------ PAGE CONFIG ------------------
+# Page config
 st.set_page_config(
     page_title="Chest X-Ray Pneumonia Detection",
     page_icon="🫁",
     layout="wide"
 )
 
-# ----------------- CSS: BLOODSTREAM VISUALS -----------------
+# UI
 st.markdown(f"""
 <style>
-/* 1. GLOBAL RESET & SCROLLBAR HIDING */
+/* 1. Reset & scrollbar - Hide */
 * {{ user-select: none; }}
 ::-webkit-scrollbar {{ display: none; }}
 
-/* 2. BACKGROUND: DEEP BLOODSTREAM GRADIENT */
+/* 2. Bg: Bloodstream gradient */
 .stApp {{
     /* Deep red to black gradient simulating depth */
     background: radial-gradient(circle at 50% 50%, #4a0000 0%, #2a0000 40%, #000000 100%);
@@ -35,7 +35,7 @@ st.markdown(f"""
     overflow: hidden; /* Prevent scrollbars from moving elements */
 }}
 
-/* 3. REALISTIC RED BLOOD CELL (CSS ONLY) */
+/* 3. RBC (CSS ONLY) */
 .blood-cell {{
     position: fixed;
     border-radius: 50%;
@@ -52,7 +52,7 @@ st.markdown(f"""
     animation: rushDiagonal linear infinite;
 }}
 
-/* 4. DIAGONAL RUSH ANIMATION */
+/* 4. Diag rush animate */
 @keyframes rushDiagonal {{
     0% {{
         transform: translate(-100px, -100px) rotate(0deg) scale(0.8);
@@ -67,7 +67,7 @@ st.markdown(f"""
     }}
 }}
 
-/* 5. GLASSMORPHISM CONTAINER */
+/* 5. "GLASSMORPHISM CONTAINER" - my fav*/
 .block-container {{
     position: relative;
     z-index: 2; /* Sits above the blood cells */
@@ -80,7 +80,7 @@ st.markdown(f"""
     margin: auto;
 }}
 
-/* 6. TEXT & WIDGET STYLING */
+/* 6. Text & widget STYLIN(💅yaasssss */
 h1, h2, h3, h4, h5, h6, label, .stMarkdown p, .stText, .stFileUploader label {{ 
     color: #ffebee !important; 
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
@@ -109,17 +109,15 @@ footer {{ visibility: hidden; }}
 </style>
 """, unsafe_allow_html=True)
 
-# ----------------- PYTHON LOGIC: GENERATE FLOATING CELLS -----------------
-# We generate random parameters for 20 blood cells so they look organic
-# "Rushing" feel comes from faster durations (e.g., 5s to 12s)
+# u thought i was done with UI? *prceeds to add some more UI* hehe
 html_cells = ""
 for i in range(20):
     # Random properties
-    left_pos = random.randint(-10, 90)  # Start slightly off-screen to mid-screen
-    top_pos = random.randint(-10, 20)  # Start mostly at top
-    size = random.randint(40, 120)  # Varying size (depth perception)
-    duration = random.uniform(5, 12)  # Varying speeds (fast rush)
-    delay = random.uniform(0, 10)  # Don't all start at once
+    left_pos = random.randint(-10, 90)
+    top_pos = random.randint(-10, 20)
+    size = random.randint(40, 120)
+    duration = random.uniform(5, 12)
+    delay = random.uniform(0, 10)
 
     html_cells += f"""
     <div class="blood-cell" style="
@@ -134,8 +132,8 @@ for i in range(20):
 
 st.markdown(html_cells, unsafe_allow_html=True)
 
-# ------------------ MAIN APP CONTENT ------------------
 
+# main app
 col1, col2 = st.columns([1, 8])
 with col1:
     st.write("")  # Spacer
@@ -143,7 +141,7 @@ with col2:
     st.title("🫁 Chest X-Ray Pneumonia Detection")
     st.markdown("### 🧬 AI-Powered Diagnostics")
 
-# ------------------ DISCLAIMER ------------------
+# Dhisklaimer
 with st.expander("⚠️ Medical Disclaimer"):
     st.warning(
         """
@@ -154,7 +152,7 @@ with st.expander("⚠️ Medical Disclaimer"):
     )
 
 
-# ------------------ LOAD MODEL ------------------
+# loading model
 @st.cache_resource
 def load_model():
     return tf.keras.models.load_model("pneumonia_model.keras")
@@ -168,7 +166,7 @@ except OSError:
 
 LAST_CONV_LAYER = "conv5_block16_concat"
 
-# ------------------ FILE UPLOAD ------------------
+# uploading file
 uploaded_file = st.file_uploader(
     "📤 Upload Chest X-ray Image",
     type=["jpg", "jpeg", "png"]
@@ -183,7 +181,7 @@ if uploaded_file:
     img_array = np.array(img_resized) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
 
-    # ------------------ PREDICTION ------------------
+    # prediction part
     prediction = model.predict(img_array)[0][0]
 
     label = "PNEUMONIA" if prediction > 0.5 else "NORMAL"
@@ -199,12 +197,12 @@ if uploaded_file:
 
     st.write("")  # Spacer
 
-    # ------------------ CONFIDENCE BAR ------------------
+
     st.markdown("### 📊 Model Confidence")
     st.progress(float(confidence))
     st.write(f"Confidence: **{confidence * 100:.2f}%**")
 
-    # ------------------ GRAD-CAM ------------------
+    # grad-cam 
     if show_gradcam:
         heatmap = get_gradcam_heatmap(
             model=model,
@@ -214,7 +212,7 @@ if uploaded_file:
 
         fig, ax = plt.subplots(1, 2, figsize=(10, 4))
 
-        # Transparent background for the plot
+        # Transparent bg
         fig.patch.set_alpha(0.0)
 
         ax[0].imshow(image)
